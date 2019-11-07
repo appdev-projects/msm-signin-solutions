@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Target MSM Signin</title>
+  <%= csrf_meta_tags %>
+
+  <!-- Expand the number of characters we can use in the document beyond basic ASCII 🎉 -->
+  <meta charset="utf-8">
+
+  <!-- Make it responsive to small screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_pack_tag 'application' %>
+
+  <!-- Connect Bootstrap assets -->
+  <!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
+  <!--  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
+  <!--  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script> -->
+
+  <!-- Connect Font Awesome assets -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script> -->
+  
+  <!-- Make it responsive to small screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+  
+  <!DOCTYPE html>
+<html>
+
+<head>
+  <title>Target MSM Signin</title>
+  <%= csrf_meta_tags %>
+
+  <!-- Expand the number of characters we can use in the document beyond basic ASCII 🎉 -->
+  <meta charset="utf-8">
+
+  <!-- Make it responsive to small screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_pack_tag 'application' %>
+
+  <!-- Connect Bootstrap assets -->
+  <!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
+  <!--  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
+  <!--  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script> -->
+
+  <!-- Connect Font Awesome assets -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script> -->
+  
+  <!-- Make it responsive to small screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>  
+  <ul>
+    <% if session.fetch(:user_id).blank? %>
+      <li>
+        <a href="/user_sign_in">
+          Sign In
+        </a>
+      </li>
+      <li>
+        <a href="/user_sign_up">
+          Sign Up
+        </a>
+      </li>
+    <% else %>
+      <li>
+        <a href="/bookmarks">
+          My Bookmarks
+        </a>
+      </li>
+      <li>
+        <a href="/edit_user">
+          Edit Profile
+        </a>
+      </li>
+      <li>
+        <a href="/user_sign_out">
+          Sign Out
+        </a>
+      </li>
+    <% end %>
+    <li>
+      <a href="/movies">
+        All movies
+      </a>
+    </li>
+    <li>
+      <a href="/movies/long">
+        Long movies
+      </a>
+    </li>
+    <li>
+      <a href="/movies/short">
+        Short movies
+      </a>
+    </li>
+    <li>
+      <a href="/movies/last_decade">
+        Recent movies
+      </a>
+    </li>
+  </ul>
+
+  <div class="container">
+    <% if notice.present? %>
+      <div>
+        <%= notice %>
+      </div>
+    <% end %>
+
+    <% if alert.present? %>
+      <div>
+        <%= alert %>
+      </div>
+    <% end %>
+
+    <%= yield %>
+  </div>
+</body>
+
+</html>
